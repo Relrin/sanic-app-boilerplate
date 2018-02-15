@@ -16,7 +16,7 @@ class MongoDbExtension(BaseExtension):
 
         @app.listener('after_server_stop')
         async def mongodb_free_resources(app_inner, _loop):
-            client = setattr(app_inner, self.app_attribute, None)
+            client = getattr(app_inner, self.app_attribute, None)
 
             if client:
                 client.disconnect()
