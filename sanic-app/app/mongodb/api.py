@@ -12,10 +12,8 @@ class Artist(Document):
 
 
 class ArtistSerializer(ModelSchema):
-
     class Meta:
         model = Artist
-
 
 
 @bp.route('/mongodb')
