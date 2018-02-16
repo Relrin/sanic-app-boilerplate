@@ -1,5 +1,5 @@
 from sanic import Sanic
-from mongomotor import connect
+from motor.motor_asyncio import AsyncIOMotorClient
 
 from app.extensions.base import BaseExtension
 
@@ -11,7 +11,7 @@ class MongoDbExtension(BaseExtension):
 
         @app.listener('before_server_start')
         async def mongodb_configure(app_inner, _loop):
-            client = connect(host=app_inner.config['MONGODB_URI'])
+            client = AsyncIOMotorClient(app_inner.config['MONGODB_URI'])
             setattr(app_inner, self.app_attribute, client)
 
         @app.listener('after_server_stop')
@@ -19,4 +19,4 @@ class MongoDbExtension(BaseExtension):
             client = getattr(app_inner, self.app_attribute, None)
 
             if client:
-                client.disconnect()
+                client.close()
