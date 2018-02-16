@@ -51,13 +51,13 @@ sanic-app/
 - app/redis - Contains API endpoints that works with Redis as a cache storage
 
 ## Files
-**app/__init__.py** 
+**app/__init__.py**  
 Contains everything that necessary for running an application: initialize steps, registering blueprints and APIs and so on. 
 
-**config.py**
+**config.py**  
 A place for collecting all configuration parameters for a Sanic application. Specify it once, use it everywhere where is needed.
 
-**manage.py**
+**manage.py**  
 Here you can specify a list of commands that will make your life as developer easier. Basically, it relies onto [Sanic-Script] (https://github.com/tim2anna/sanic-script) extension, that makes it real. Moreover, you can implement your own command or re-use existing plugins for it. For example, add migration commands from the [Sanic-PW](https://github.com/Relrin/sanic-pw) package for creating and applying Peewee ORM migrations.
 
 For getting a list of available commands just invoke it with `-h`/`--help` flag
