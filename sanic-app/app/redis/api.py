@@ -1,10 +1,6 @@
 from sanic import Blueprint, response
 
 
-bp = Blueprint('redis-api')
-
-
-@bp.route('/redis')
 async def handle(request):
     with await request.app.redis as redis:
         await redis.set('test-my-key', 'value')

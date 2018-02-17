@@ -2,8 +2,8 @@ from sanic import Sanic
 
 from app.extensions.redis import RedisExtension
 from app.extensions.mongodb import MongoDbExtension
-from app.redis import bp as redis_bp
-from app.mongodb import bp as mongodb_bp
+from app.redis.blueprints import bp as redis_bp
+from app.mongodb.blueprints import bp as mongodb_bp
 
 
 app = Sanic('sanic-app')
