@@ -19,7 +19,7 @@ After this you can get an access to the application API via `http://localhost:80
 Available resources after starting docker-compose with settings that were specified in `docker-compose.dev.yaml`:
 - Public API: `http://localhost:8000/redis` and `http://localhost:8000/mongodb`
 - Redis UI: `http://localhost:8081/`
-- MongoDB UI: `http://localhost:1234/` with `root`/`root` credentials
+- MongoDB UI: `http://localhost:1234/`
 
 # The application structure
 ```
