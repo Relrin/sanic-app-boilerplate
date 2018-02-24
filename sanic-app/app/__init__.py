@@ -1,7 +1,7 @@
 from sanic import Sanic
 
-from app.extensions.redis import RedisExtension
-from app.extensions.mongodb import MongoDbExtension
+from sanic_redis_ext import RedisExtension
+from sanic_mongodb_ext import MongoDbExtension
 from app.redis.blueprints import bp as redis_bp
 from app.mongodb.blueprints import bp as mongodb_bp
 
