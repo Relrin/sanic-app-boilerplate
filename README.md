@@ -58,7 +58,7 @@ Contains everything that necessary for running an application: initialize steps,
 A place for collecting all configuration parameters for a Sanic application. Specify it once, use it everywhere where is needed.
 
 **manage.py**  
-Here you can specify a list of commands that will make your life as developer easier. Basically, it relies onto [Sanic-Script] (https://github.com/tim2anna/sanic-script) extension, that makes it real. Moreover, you can implement your own command or re-use existing plugins for it. For example, add migration commands from the [Sanic-PW](https://github.com/Relrin/sanic-pw) package for creating and applying Peewee ORM migrations.
+Here you can specify a list of commands that will make your life as developer easier. Basically, it relies onto [Sanic-Script](https://github.com/tim2anna/sanic-script) extension, that makes it real. Moreover, you can implement your own command or re-use existing plugins for it. For example, add migration commands from the [Sanic-PW](https://github.com/Relrin/sanic-pw) package for creating and applying Peewee ORM migrations.
 
 For getting a list of available commands just invoke it with `-h`/`--help` flag
 ```
